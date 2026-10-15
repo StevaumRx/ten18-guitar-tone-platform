@@ -34,7 +34,7 @@ The goal is the closest practical approximation, not a promise of an identical s
 
 ## Initial boundary
 
-Manual adjustment is confirmed for the initial version. Automatic hardware control, MIDI transfer, preset export, and direct device integration are outside this initial scope unless separately approved.
+Manual adjustment is confirmed for the initial version. Future controller integration is now an approved direction: preserve structured settings that can later be transferred from a computer to the screen-equipped controller and translated into supported device commands. Hardware control is a later milestone; see HARDWARE.md. Preset-file export is not yet specified.
 
 A link or file is a reference input. Do not imply that naming a song proves its audio has been retrieved or analyzed. Supported link sources, file formats, clip selection, and the analysis approach remain to be decided.
 

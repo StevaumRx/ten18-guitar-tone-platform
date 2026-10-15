@@ -27,3 +27,9 @@ See PRODUCT.md for the scope, output requirements, boundaries, and open question
 - Confirm Vini's GitHub username and invite him.
 
 No tone-recommendation features or third-party integrations are implemented yet.
+
+## Future hardware milestone
+- Collect prototype specifications and verify supported device protocols.
+- Define structured tone recipes and device capability mappings before implementing exports.
+- Design and test computer-to-controller transfer, offline recipe use, and supported downstream control.
+- See HARDWARE.md; hardware integration is not implemented.
