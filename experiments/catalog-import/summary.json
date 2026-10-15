@@ -1,0 +1,26 @@
+{
+  "retrievedDate": "2026-10-15",
+  "crossSourceDeduplication": "not-performed",
+  "sources": [
+    {
+      "name": "pedalplayground",
+      "rawRecords": 8557,
+      "normalizedRecords": 8552,
+      "brands": 779
+    },
+    {
+      "name": "pedalboardplanner",
+      "rawRecords": 7823,
+      "normalizedRecords": 7823,
+      "brands": 520
+    },
+    {
+      "name": "rockboard",
+      "rawRecords": 13680,
+      "normalizedRecords": 13680,
+      "brands": 1673
+    }
+  ],
+  "rawRecordTotal": 30060,
+  "normalizedRecordTotal": 30055
+}

@@ -12,7 +12,10 @@ test('development server HTTP contract', async (t) => {
   const home = await fetch(base);
   assert.equal(home.status, 200);
   assert.match(home.headers.get('content-type'), /text\/html/);
-  assert.match(await home.text(), /Guitar Tone/);
+  assert.match(await home.text(), /Rig Builder/);
+  const app = await fetch(`${base}/app.js`);
+  assert.equal(app.status, 200);
+  assert.match(app.headers.get('content-type'), /text\/javascript/);
   const health = await fetch(`${base}/health`);
   assert.equal(health.status, 200);
   assert.deepEqual(await health.json(), { status: 'ok', project: 'ten18-guitar-tone-platform' });

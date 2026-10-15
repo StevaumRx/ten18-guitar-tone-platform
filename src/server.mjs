@@ -1,7 +1,14 @@
 import { createServer } from 'node:http';
 import { readFile } from 'node:fs/promises';
 
-const page = new URL('../public/index.html', import.meta.url);
+const publicDirectory = new URL('../public/', import.meta.url);
+const contentTypes = { '.css': 'text/css; charset=utf-8', '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.json': 'application/json; charset=utf-8' };
+
+function publicFile(path) {
+  const requested = path === '/' ? 'index.html' : path.slice(1);
+  if (!requested || requested.includes('..') || !/^[a-zA-Z0-9._/-]+$/.test(requested)) return null;
+  return new URL(requested, publicDirectory);
+}
 
 export function createApp() {
   return createServer(async (request, response) => {
@@ -16,18 +23,20 @@ export function createApp() {
       response.end(JSON.stringify({ status: 'ok', project: 'ten18-guitar-tone-platform' }));
       return;
     }
-    if (path !== '/') {
+    const file = publicFile(path);
+    if (!file) {
       response.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' });
       response.end('Not found');
       return;
     }
     try {
-      const content = await readFile(page);
-      response.writeHead(200, { 'Content-Type': 'text/html; charset=utf-8' });
+      const content = await readFile(file);
+      const extension = path.includes('.') ? path.slice(path.lastIndexOf('.')) : '.html';
+      response.writeHead(200, { 'Content-Type': contentTypes[extension] ?? 'application/octet-stream' });
       response.end(content);
     } catch {
-      response.writeHead(500);
-      response.end('Unable to load the development page');
+      response.writeHead(404, { 'Content-Type': 'text/plain; charset=utf-8' });
+      response.end('Not found');
     }
   });
 }

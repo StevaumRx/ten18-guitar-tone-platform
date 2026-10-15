@@ -1,5 +1,19 @@
 # Decisions
 
+## 2026-10-15 — Single-source equipment catalog
+
+RockBoard is the sole source for selectable equipment. The downloaded snapshot has 13,680 records across 1,673 brands, compared with 8,552 normalized Pedal Playground entries and 7,823 Pedalboard Planner entries. It includes image references throughout and categories on 12,971 source records. This makes it the most complete of the three retrieved snapshots for our card picker; this does not assert that it is the largest database anywhere or an openly licensed repository.
+
+The importer collapses only case, diacritic and whitespace differences within RockBoard (13,658 selectable entries). Punctuation is retained because Buffer, Buffer+ and Buffer++ are different models. Editions and versions remain distinct. Search ignores spacing, so MercuryX finds Mercury X. Manufacturer-verified controls, ports and MIDI profiles remain unknown.
+
+Other source snapshots are retained solely as development archives and for migrating existing saved rigs. They do not populate the picker. Old catalog references map to a RockBoard identity only when unambiguous. Unmatched or ambiguous identities remain usable in existing saved rigs, with their labels retained, but cannot be selected as new catalog cards. Instance IDs and wiring are preserved.
+
+Regenerate with `npm run build:catalog`. RockBoard snapshot identity, image paths, dimensions and source IDs are preserved. Image paths are source references, not yet verified downloadable URLs. Public deployment still needs the previously documented data/image reuse review; switching sources does not establish reuse rights.
+
+## 2026-10-15 — Local rig-builder representation
+
+The first rig builder uses browser-local storage only. Its versioned document keeps catalog references as user-specific instances, a derived linear audio connection list, a listening-output choice, and reserved extension arrays for later ports, branches, modeler blocks, and control connections. Catalog definitions stay in application code and do not include device controls, protocols, or verified capability claims. Physical card order represents the player’s wiring; it does not remotely rewire equipment. Tone recipes remain outside this configuration.
+
 ## 2026-10-15 — Repository foundation
 Use a single repository for application code, tests, experiments, and documentation. Keep the initial tooling dependency-free with Node.js so it runs immediately. This is a starting environment; it does not commit the product to a final frontend or backend framework.
 
