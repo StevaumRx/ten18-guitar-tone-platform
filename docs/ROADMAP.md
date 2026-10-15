@@ -1,15 +1,29 @@
 # Roadmap
 
-## Ready
-- Local source repository and development server.
-- Automated HTTP tests and GitHub CI configuration.
-- Spaces for experiments, assets, requirements, and decisions.
+## Foundation created locally
+- Local source repository and development server scaffold.
+- HTTP tests and GitHub CI configuration; local HTTP execution is blocked by session port restrictions.
+- Shared instructions for Codex and Claude Code, plus contributor guidance.
+- Private GitHub repository created; source upload and remote CI verification remain blocked by authentication/access.
 
-## Define next
-- Target user and the primary tone workflow.
-- Required inputs, expected outputs, and supported guitar equipment.
-- First MVP feature and acceptance criteria.
-- Frontend/backend stack, storage, and any AI services.
-- Hosting and preview deployment, if needed.
+## Product direction confirmed
+- Provisional name; branding may change during development.
+- User supplies their guitar setup and a song, part, or line reference via link or file.
+- System recommends practical parameters and effects for that user's equipment.
+- User manually applies the settings to approximate the reference tone.
 
-No product features or third-party integrations are implemented yet.
+See PRODUCT.md for the scope, output requirements, boundaries, and open questions.
+
+## Next decisions
+- Choose the first supported setup and reference segment for validation.
+- Define equipment metadata and reference input requirements.
+- Agree on MVP acceptance criteria and a listening feedback process.
+- Choose frontend/backend stack, storage, analysis approach, and AI services.
+- Configure hosting and previews when needed.
+
+## Collaboration setup pending
+- Restore GitHub access and upload the local commits without losing either history.
+- Verify GitHub Actions after upload.
+- Confirm Vini's GitHub username and invite him.
+
+No tone-recommendation features or third-party integrations are implemented yet.

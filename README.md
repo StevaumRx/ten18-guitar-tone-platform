@@ -1,6 +1,6 @@
 # Ten18 — Guitar Tone Platform
 
-Development home for the Ten18 Guitar Tone Platform. This repository starts with a working local development environment and automated checks. Product requirements and the application stack will be decided as development progresses.
+Development home for the Ten18 Guitar Tone Platform. This repository starts with a working local development environment and automated checks. The name is provisional. The product will turn a reference song or guitar part into manual settings for the user’s own equipment. See [the product scope](docs/PRODUCT.md). The application stack remains to be decided.
 
 ## Run locally
 
