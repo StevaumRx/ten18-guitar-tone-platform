@@ -6,6 +6,14 @@ Status: user-approved concept; implementation has not started.
 
 The project name is provisional. Ten18 Guitar Tone Platform and the current repository name are working labels, not a final product name. Naming can change during development and testing.
 
+## Audience and role within Ten18
+
+This is an add-on tool on the Ten18 Store website, serving existing clients and future clients. Potential buyers of the Arduino-based controller are also an intended audience, with the device relationship still being explored.
+
+The tone tool is not intended to be sold as a separate product. Its purpose is to support the Ten18 community in using their gear. Do not assume a standalone subscription business, separate product sales, purchase requirements, or mandatory controller ownership. Access rules and the exact store integration remain undecided.
+
+External services such as Tom na Mão are references for learning, not a mandate for competitive positioning or copying their business model.
+
 ## Purpose
 
 Help a guitarist approximate a reference guitar tone using equipment they actually own. The system translates a musical reference into actionable, equipment-specific settings. The guitarist applies those settings manually in the initial version.

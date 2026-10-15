@@ -10,3 +10,6 @@ The name remains provisional. Users provide their equipment and a song, guitar p
 
 ## 2026-10-15 — Future standalone controller integration
 Preserve structured tone recipes so a computer can later configure the user's screen-equipped controller prototype. It should control TONEX and other connected devices where supported, and operate without the computer during play. Exact board, TONEX model, USB/Bluetooth topology, and protocols remain to be verified. Manual adjustment remains the first milestone. See HARDWARE.md for proposed design requirements.
+
+## 2026-10-15 — Ten18 Store audience and purpose
+The platform is a Ten18 Store website add-on supporting existing clients and future clients, potentially including buyers of the Arduino-based controller. The tone tool is not intended to be sold separately. Do not assume subscriptions, paid access, a purchase requirement, or device ownership requirements. Store integration and access rules remain to be defined. External products are learning references.

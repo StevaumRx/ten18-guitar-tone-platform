@@ -7,6 +7,8 @@
 - Private GitHub repository created; source upload and remote CI verification remain blocked by authentication/access.
 
 ## Product direction confirmed
+- Ten18 Store add-on for existing and future clients; potentially also controller buyers.
+- No separate sale of the tone tool is intended; access rules and store integration remain undecided.
 - Provisional name; branding may change during development.
 - User supplies their guitar setup and a song, part, or line reference via link or file.
 - System recommends practical parameters and effects for that user's equipment.
