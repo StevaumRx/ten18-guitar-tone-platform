@@ -39,7 +39,7 @@ GitHub Actions runs these checks on pushes and pull requests. The initial tests 
 
 Start a feature branch (`git switch -c feature/short-name`), make a focused change, run the checks, commit, and push. Open a pull request into `main`. Use experiments for uncertain ideas and move accepted code into `src/` with relevant tests.
 
-The GitHub repository stores source and runs checks. It does not yet deploy a public application or preview website. See [the roadmap](docs/ROADMAP.md) and [development notes](docs/DEVELOPMENT.md).
+The GitHub repository stores source and runs checks. GitHub Pages publishes the browser application from `public/` after GitHub Pages is configured to use GitHub Actions. See [the roadmap](docs/ROADMAP.md) and [development notes](docs/DEVELOPMENT.md).
 
 ## Team and AI collaboration
 

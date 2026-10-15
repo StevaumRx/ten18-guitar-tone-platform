@@ -21,7 +21,7 @@ See PRODUCT.md for the scope, output requirements, boundaries, and open question
 - Define equipment metadata and reference input requirements.
 - Agree on MVP acceptance criteria and a listening feedback process.
 - Choose frontend/backend stack, storage, analysis approach, and AI services.
-- Configure hosting and previews when needed.
+- GitHub Pages publishes the static browser interface from `public/` when its workflow is enabled in repository settings.
 
 ## Collaboration setup pending
 - Restore GitHub access and upload the local commits without losing either history.

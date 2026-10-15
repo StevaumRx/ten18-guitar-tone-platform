@@ -10,6 +10,10 @@ Other source snapshots are retained solely as development archives and for migra
 
 Regenerate with `npm run build:catalog`. RockBoard snapshot identity, image paths, dimensions and source IDs are preserved. Image paths are source references, not yet verified downloadable URLs. Public deployment still needs the previously documented data/image reuse review; switching sources does not establish reuse rights.
 
+## 2026-10-15 — GitHub Pages deploys the static application from `public/`
+
+The rig builder is a static browser application, including its generated equipment catalog. GitHub Pages uses a GitHub Actions workflow to upload only `public/`, rather than serving the repository root (which displays project documentation). Enabling this deployment makes the browser-delivered catalog data publicly accessible at the Pages URL.
+
 ## 2026-10-15 — Local rig-builder representation
 
 The first rig builder uses browser-local storage only. Its versioned document keeps catalog references as user-specific instances, a derived linear audio connection list, a listening-output choice, and reserved extension arrays for later ports, branches, modeler blocks, and control connections. Catalog definitions stay in application code and do not include device controls, protocols, or verified capability claims. Physical card order represents the player’s wiring; it does not remotely rewire equipment. Tone recipes remain outside this configuration.
