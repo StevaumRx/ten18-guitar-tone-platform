@@ -10,12 +10,12 @@
 <body>
   <header><a class="brand" href="./" aria-label="Ten18 rig builder">TEN18</a><span>RIG BUILDER <b>LOCAL BETA</b></span></header>
   <main>
-    <section class="intro"><p class="eyebrow">Your real setup, in order</p><h1>Build the signal chain you actually wire.</h1><p>Search the imported equipment catalog, arrange the physical path, and save it on this device. Controls, ports, and MIDI are unknown until verified from appropriate documentation.</p></section>
+    <section class="intro"><p class="eyebrow">Your real setup, in order</p><h1>Build the signal chain you actually wire.</h1><p>Choose a generic equipment type, arrange the physical path, and save it on this device. Controls, ports, and MIDI are unknown until verified from appropriate documentation.</p></section>
     <div class="builder">
       <section class="panel catalog-panel" aria-labelledby="catalog-title"><div class="panel-heading"><div><p class="eyebrow">01 · Catalog</p><h2 id="catalog-title">Add equipment</h2></div><label class="search"><span class="sr-only">Search equipment</span><input id="catalog-search" type="search" placeholder="Search brand, model, or category"></label></div><ul id="catalog-list" class="catalog-list"><li class="empty">Loading catalog…</li></ul></section>
       <section class="panel chain-panel" aria-labelledby="chain-title"><div class="panel-heading"><div><p class="eyebrow">02 · Signal path</p><h2 id="chain-title">Physical chain</h2></div><span class="saved" id="save-status" role="status">Saved locally.</span></div><p class="helper">Drag cards to reorder. Or use the arrow buttons; order describes wiring, not remote device control.</p><ol id="chain-list" class="chain-list" aria-label="Physical signal chain"></ol><div class="output"><div><p class="eyebrow">03 · Listening output</p><label for="listening-output">I’m listening through</label></div><select id="listening-output"><option value="amp-input">Amp input</option><option value="audio-interface">Audio interface</option><option value="powered-speaker">Powered speaker</option><option value="headphones">Headphones</option></select></div></section>
     </div>
-    <aside class="notice"><strong>What this saves</strong><span>A versioned local rig: selected equipment identities, unique instances, their audio connections, and a listening output. Each catalog card retains its imported source-record references. Tone recipes, hardware commands, control mappings, ports, and branches are not implemented here.</span></aside>
+    <aside class="notice"><strong>What this saves</strong><span>A versioned local rig: selected equipment types, unique instances, their audio connections, and a listening output. This starter catalog does not include third-party images, product copy, or source-record data. Tone recipes, hardware commands, control mappings, ports, and branches are not implemented here.</span></aside>
   </main>
   <script type="module" src="./app.js"></script>
 </body>

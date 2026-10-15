@@ -22,12 +22,12 @@ function persist(message = 'Rig saved locally.') {
 function renderCatalog() {
   const query = search.value.trim().toLowerCase();
   if (!query) {
-    catalogList.innerHTML = `<li class="empty">Search ${catalog.length.toLocaleString()} imported equipment records by brand, model, or category.</li>`;
+    catalogList.innerHTML = `<li class="empty">Search ${catalog.length.toLocaleString()} generic equipment types by name or category.</li>`;
     return;
   }
   const matches = catalog.filter((device) => matchesEquipment(device, query));
   const visible = matches.slice(0, 60);
-  catalogList.innerHTML = visible.map((device) => `<li class="catalog-card"><div class="catalog-card-mark" aria-hidden="true">${escapeHtml(device.brand.slice(0, 1))}</div><div class="catalog-card-copy"><span class="eyebrow">${escapeHtml(device.categories.join(' · ') || 'Equipment')}</span><h3>${escapeHtml(device.model)}</h3><p>${escapeHtml(device.brand)}</p><small>RockBoard · controls & MIDI unknown</small></div><button type="button" data-add="${escapeHtml(device.id)}">Add to rig</button></li>`).join('') || '<li class="empty">No catalog devices match that search.</li>';
+  catalogList.innerHTML = visible.map((device) => `<li class="catalog-card"><div class="catalog-card-mark" aria-hidden="true">${escapeHtml(device.brand.slice(0, 1))}</div><div class="catalog-card-copy"><span class="eyebrow">${escapeHtml(device.categories.join(' · ') || 'Equipment')}</span><h3>${escapeHtml(device.model)}</h3><p>${escapeHtml(device.brand)}</p><small>Ten18 starter type · controls & MIDI unknown</small></div><button type="button" data-add="${escapeHtml(device.id)}">Add to rig</button></li>`).join('') || '<li class="empty">No catalog devices match that search.</li>';
   if (matches.length > visible.length) catalogList.insertAdjacentHTML('beforeend', `<li class="results-note">Showing ${visible.length} of ${matches.length.toLocaleString()} matches. Refine your search.</li>`);
 }
 function renderChain() {
@@ -59,7 +59,7 @@ try {
   catalogIds = createCatalogIndex([...catalog, ...legacyCatalog]);
   rig = loadRig(migrated, catalogIds) ?? createEmptyRig();
   if (serialized && loadRig(migrated, catalogIds)) localStorage.setItem(storageKey, JSON.stringify(rig));
-  status.textContent = `${catalog.length.toLocaleString()} RockBoard equipment entries ready.`;
+  status.textContent = `${catalog.length.toLocaleString()} Ten18 generic equipment types ready.`;
   render();
 } catch {
   status.textContent = 'Unable to load the local catalog.';

@@ -1,14 +1,10 @@
 # Decisions
 
-## 2026-10-15 — Single-source equipment catalog
+## 2026-10-15 — Clean-slate equipment catalog
 
-RockBoard is the sole source for selectable equipment. The downloaded snapshot has 13,680 records across 1,673 brands, compared with 8,552 normalized Pedal Playground entries and 7,823 Pedalboard Planner entries. It includes image references throughout and categories on 12,971 source records. This makes it the most complete of the three retrieved snapshots for our card picker; this does not assert that it is the largest database anywhere or an openly licensed repository.
+The downloadable catalog contains only generic equipment types created for Ten18. It contains no third-party product photos, logos, descriptions, source identifiers, source URLs, dimensions, or imported catalog records. The prior research snapshots and sample images were removed from the repository and are not used for saved-rig migration.
 
-The importer collapses only case, diacritic and whitespace differences within RockBoard (13,658 selectable entries). Punctuation is retained because Buffer, Buffer+ and Buffer++ are different models. Editions and versions remain distinct. Search ignores spacing, so MercuryX finds Mercury X. Manufacturer-verified controls, ports and MIDI profiles remain unknown.
-
-Other source snapshots are retained solely as development archives and for migrating existing saved rigs. They do not populate the picker. Old catalog references map to a RockBoard identity only when unambiguous. Unmatched or ambiguous identities remain usable in existing saved rigs, with their labels retained, but cannot be selected as new catalog cards. Instance IDs and wiring are preserved.
-
-Regenerate with `npm run build:catalog`. RockBoard snapshot identity, image paths, dimensions and source IDs are preserved. Image paths are source references, not yet verified downloadable URLs. Public deployment still needs the previously documented data/image reuse review; switching sources does not establish reuse rights.
+Future branded or model-specific records require a documented right to use the exact record before they enter the catalog: either Ten18-created information, written manufacturer permission, or a clearly compatible public-data license. Keep the license or permission evidence in a private review register. Do not bulk-scrape retailer, manufacturer, or catalog websites; public availability does not establish permission to redistribute a database or images.
 
 ## 2026-10-15 — GitHub Pages deploys the static application from `public/`
 
