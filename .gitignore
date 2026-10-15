@@ -7,3 +7,7 @@ coverage/
 dist/
 *.log
 .tmp/
+
+# Personal AI tool configuration
+CLAUDE.local.md
+.claude/settings.local.json
