@@ -14,6 +14,8 @@ Regenerate with `npm run build:catalog`. RockBoard snapshot identity, image path
 
 The rig builder is a static browser application, including its generated equipment catalog. GitHub Pages uses a GitHub Actions workflow to upload only `public/`, rather than serving the repository root (which displays project documentation). Enabling this deployment makes the browser-delivered catalog data publicly accessible at the Pages URL.
 
+Static application and catalog references are relative to the deployed `public/` directory. This keeps the same files usable from the local server and from the repository's GitHub Pages project path, without assuming the site is hosted at a domain root.
+
 ## 2026-10-15 — Local rig-builder representation
 
 The first rig builder uses browser-local storage only. Its versioned document keeps catalog references as user-specific instances, a derived linear audio connection list, a listening-output choice, and reserved extension arrays for later ports, branches, modeler blocks, and control connections. Catalog definitions stay in application code and do not include device controls, protocols, or verified capability claims. Physical card order represents the player’s wiring; it does not remotely rewire equipment. Tone recipes remain outside this configuration.

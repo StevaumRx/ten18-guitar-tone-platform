@@ -46,7 +46,7 @@ chainList.addEventListener('dragover', (event) => event.preventDefault());
 chainList.addEventListener('drop', (event) => { event.preventDefault(); const targetId = event.target.closest('[data-instance]')?.dataset.instance; if (!draggedId || !targetId || draggedId === targetId) return; const from = rig.instances.findIndex((item) => item.instanceId === draggedId); const to = rig.instances.findIndex((item) => item.instanceId === targetId); const instances = [...rig.instances]; const [moved] = instances.splice(from, 1); instances.splice(to, 0, moved); rig = { ...rig, instances, connections: buildConnections(instances) }; persist('Physical signal chain reordered and saved locally.'); renderChain(); });
 
 try {
-  const response = await fetch('/equipment-catalog.json');
+  const response = await fetch('./equipment-catalog.json');
   if (!response.ok) throw new Error('Catalog is unavailable.');
   const data = await response.json();
   if (data.schemaVersion !== 1 || !Array.isArray(data.items)) throw new Error('Catalog data is invalid.');
